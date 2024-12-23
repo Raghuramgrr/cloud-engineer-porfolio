@@ -1,0 +1,32 @@
+body {
+    background: #1f1f1f;
+    color: #f4f4f4;
+}
+header {
+    background: #333;
+    color: #ffffff;
+}
+nav {
+    background: #444;
+}
+nav a {
+    color: #f4f4f4;
+}
+section h2 {
+    color: #ffa500;
+}
+.card {
+    background: #333;
+    color: #ffffff;
+}
+footer {
+    background: #444;
+    color: #ffffff;
+}
+footer a {
+    color: #ffa500;
+}
+.theme-toggle {
+    background: #ffa500;
+    color: #1f1f1f;
+}
