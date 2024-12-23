@@ -70,37 +70,29 @@
             padding-bottom: 0.5rem;
             color: #333;
         }
-        .about, .experience, .skills, .projects, .education {
+        .card {
             background: #ffffff;
             margin-bottom: 2rem;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .about ul, .experience ul, .skills ul, .education ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .about ul li, .experience ul li, .skills ul li, .education ul li {
-            margin-bottom: 1rem;
-            padding: 1rem;
-            border-left: 4px solid #ffa500;
-            background: #f9f9f9;
             transition: all 0.3s ease;
         }
-        .about ul li:hover, .experience ul li:hover, .skills ul li:hover, .education ul li:hover {
-            transform: translateX(10px);
-            background: #f1f1f1;
+        .card:hover {
+            transform: translateY(-10px);
         }
-        .project {
-            background: #f9f9f9;
-            padding: 1rem;
-            margin-bottom: 1.5rem;
-            border-left: 4px solid #ffa500;
-            transition: all 0.3s ease;
+        .card h3 {
+            margin-top: 0;
+            color: #ffa500;
         }
-        .project:hover {
-            transform: scale(1.02);
+        .card p {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
         footer {
             text-align: center;
@@ -136,111 +128,108 @@
     <a href="#education">Education</a>
 </nav>
 
-<section id="about" class="about">
+<section id="about">
     <h2>About Me</h2>
-    <ul>
-        <li>
-            <strong>Cloud Engineer</strong>
-            <ul>
-                <li>Over 11 years of experience transforming cloud infrastructures across hybrid environments.</li>
-                <li>Expert in Kubernetes, Terraform, AWS, and Azure for driving operational excellence.</li>
-                <li>Led GitLab setup for a global bank, ensuring security, scalability, and efficiency.</li>
-                <li>Specialized in cloud migrations with a focus on data privacy and regulatory compliance.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Key Achievements</strong>
-            <ul>
-                <li>Set up and optimized GitLab, Nexus, and other critical DevOps tools.</li>
-                <li>Designed and implemented RBAC for secure, efficient infrastructure access.</li>
-                <li>Key contributor to the compliance framework, working with audit teams to avoid secret leaks via Git.</li>
-                <li>Decommissioned legacy tools like Bitbucket and Jenkins, reinventing the DevOps landscape.</li>
-                <li>Played a pivotal role in modernizing infrastructure and tools, improving delivery cycles and security.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Certifications & Expertise</strong>
-            <ul>
-                <li>AWS Certified Solution Architect Professional and three other AWS certifications.</li>
-                <li>Proficient in deploying Java services, leveraging AWS Kinesis and Kafka for data processing.</li>
-                <li>Skilled in containerization using ECS and EKS to optimize application delivery and scalability.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Continuous Engineering Improvement</strong>
-            <ul>
-                <li>Mentored teams and drove continuous engineering improvements across cloud environments.</li>
-                <li>Led remote teams, utilizing collaboration tools to ensure seamless workflow and productivity.</li>
-                <li>Integrated advanced DevOps technologies to consistently modernize development strategies.</li>
-            </ul>
-        </li>
-    </ul>
+    <div class="card">
+        <h3>Cloud Engineer</h3>
+        <p>Over 11 years of experience transforming cloud infrastructures across hybrid environments. Expert in Kubernetes, Terraform, AWS, and Azure for driving operational excellence. Led GitLab setup for a global bank, ensuring security, scalability, and efficiency. Specialized in cloud migrations with a focus on data privacy and regulatory compliance.</p>
+    </div>
+    <div class="card">
+        <h3>Key Achievements</h3>
+        <p>Set up and optimized GitLab, Nexus, and other critical DevOps tools. Designed and implemented RBAC for secure, efficient infrastructure access. Key contributor to the compliance framework, working with audit teams to avoid secret leaks via Git. Decommissioned legacy tools like Bitbucket and Jenkins, reinventing the DevOps landscape. Played a pivotal role in modernizing infrastructure and tools, improving delivery cycles and security.</p>
+    </div>
+    <div class="card">
+        <h3>Certifications & Expertise</h3>
+        <p>AWS Certified Solution Architect Professional and three other AWS certifications. Proficient in deploying Java services, leveraging AWS Kinesis and Kafka for data processing. Skilled in containerization using ECS and EKS to optimize application delivery and scalability.</p>
+    </div>
+    <div class="card">
+        <h3>Continuous Engineering Improvement</h3>
+        <p>Mentored teams and drove continuous engineering improvements across cloud environments. Led remote teams, utilizing collaboration tools to ensure seamless workflow and productivity. Integrated advanced DevOps technologies to consistently modernize development strategies.</p>
+    </div>
 </section>
 
-<section id="experience" class="experience">
+<section id="experience">
     <h2>Experience Highlights</h2>
-    <ul>
-        <li><strong>Senior Technical Lead</strong> - Global Bank
+    <div class="grid-container">
+        <div class="card">
+            <h3>Senior Technical Lead - Global Bank</h3>
             <p>Led enterprise cloud solutions, enhancing developer productivity by 60% and reducing infrastructure costs by 40% through GitLab and Kubernetes automation.</p>
-        </li>
-        <li><strong>Senior Associate</strong> - Global Bank
+        </div>
+        <div class="card">
+            <h3>Senior Associate - Global Bank</h3>
             <p>Automated CI/CD pipelines and managed Kubernetes deployments, improving operational efficiency across multi-cloud environments.</p>
-        </li>
-        <li><strong>Software Engineer</strong> - Nokia Networks
+        </div>
+        <div class="card">
+            <h3>Software Engineer - Nokia Networks</h3>
             <p>Developed and deployed network solutions improving data transfer by 40% and led innovation in cloud networking.</p>
-        </li>
-        <li><strong>Developer</strong> - Honeywell
+        </div>
+        <div class="card">
+            <h3>Developer - Honeywell</h3>
             <p>Optimized deployment processes through automation, contributing to faster product rollouts and improved system performance.</p>
-        </li>
-    </ul>
+        </div>
+    </div>
 </section>
 
-<section id="skills" class="skills">
+<section id="skills">
     <h2>Skills</h2>
-    <ul>
-        <li>Kubernetes, Terraform, Ansible</li>
-        <li>AWS (ECS, EKS), Azure, Kafka</li>
-        <li>Java, Spring Boot, Microservices</li>
-        <li>CI/CD pipelines, Infrastructure automation</li>
-    </ul>
+    <div class="grid-container">
+        <div class="card">
+            <h3>Cloud & DevOps</h3>
+            <p>Kubernetes, Terraform, Ansible</p>
+        </div>
+        <div class="card">
+            <h3>Cloud Platforms</h3>
+            <p>AWS (ECS, EKS), Azure, Kafka</p>
+        </div>
+        <div class="card">
+            <h3>Programming Languages</h3>
+            <p>Java, Spring Boot, Microservices</p>
+        </div>
+        <div class="card">
+            <h3>CI/CD & Automation</h3>
+            <p>CI/CD pipelines, Infrastructure automation</p>
+        </div>
+    </div>
 </section>
 
-<section id="projects" class="projects">
+<section id="projects">
     <h2>Projects</h2>
-    
-    <div class="project">
-        <h3>Cloud Infrastructure Automation</h3>
-        <p>Automated infrastructure provisioning and cloud migrations for a global bank, reducing manual processes by 95% and increasing operational efficiency.</p>
+    <div class="grid-container">
+        <div class="card">
+            <h3>Cloud Infrastructure Automation</h3>
+            <p>Automated infrastructure provisioning and cloud migrations for a global bank, reducing manual processes by 95% and increasing operational efficiency.</p>
+        </div>
+        <div class="card">
+            <h3>Kubernetes and GitLab Integration</h3>
+            <p>Developed a Kubernetes-based CI/CD pipeline integrated with GitLab, enhancing developer productivity and reducing deployment times by 50%.</p>
+        </div>
+        <div class="card">
+            <h3>Multi-Cloud Kubernetes Deployment</h3>
+            <p>Implemented a multi-cloud Kubernetes solution for a global bank, supporting hybrid environments and ensuring high availability across AWS and Azure.</p>
+        </div>
+        <div class="card">
+            <h3>GitLab Installation & Runner Optimization</h3>
+            <p>Led GitLab installation for a global bank, optimizing the GitLab Runner cache and improving build times by 80% using Azure Blob Storage, significantly enhancing the overall CI/CD performance.</p>
+        </div>
+        <div class="card">
+            <h3>Nexus RBAC Design & Strategy</h3>
+            <p>Designed and implemented Nexus repository role-based access control (RBAC) strategy, ensuring secure access management and streamlined repository operations for enterprise-level deployments.</p>
+        </div>
     </div>
-    
-    <div class="project">
-        <h3>Kubernetes and GitLab Integration</h3>
-        <p>Developed a Kubernetes-based CI/CD pipeline integrated with GitLab, enhancing developer productivity and reducing deployment times by 50%.</p>
-    </div>
-    
-    <div class="project">
-        <h3>Multi-Cloud Kubernetes Deployment</h3>
-        <p>Implemented a multi-cloud Kubernetes solution for a global bank, supporting hybrid environments and ensuring high availability across AWS and Azure.</p>
-    </div>
-
-    <div class="project">
-        <h3>GitLab Installation & Runner Optimization</h3>
-        <p>Led GitLab installation for a global bank, optimizing the GitLab Runner cache and improving build times by 80% using Azure Blob Storage, significantly enhancing the overall CI/CD performance.</p>
-    </div>
-    
-    <div class="project">
-        <h3>Nexus RBAC Design & Strategy</h3>
-        <p>Designed and implemented Nexus repository role-based access control (RBAC) strategy, ensuring secure access management and streamlined repository operations for enterprise-level deployments.</p>
-    </div>
-
 </section>
 
-<section id="education" class="education">
+<section id="education">
     <h2>Education</h2>
-    <ul>
-        <li><strong>Master's in Software Engineering</strong>, National University of Singapore (2018)</li>
-        <li><strong>Bachelor's in Information Technology</strong>, Thiagarajar College of Engineering (2013)</li>
-    </ul>
+    <div class="grid-container">
+        <div class="card">
+            <h3>Master's in Software Engineering</h3>
+            <p>National University of Singapore (2018)</p>
+        </div>
+        <div class="card">
+            <h3>Bachelor's in Information Technology</h3>
+            <p>Thiagarajar College of Engineering (2013)</p>
+        </div>
+    </div>
 </section>
 
 <footer>
